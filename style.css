@@ -57,13 +57,11 @@ h1
 
 .navListContainer
 {
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
     background-color: var(--azul);
     text-align: center;
     list-style: none;
 }
-
+/*
 @media screen and (min-width: 768px) {
 
     .navListContainer
@@ -77,7 +75,7 @@ h1
         text-align: center;
     }    
 }
-
+*/
 .navListContainer div
 {
     display: flex;
@@ -87,7 +85,7 @@ h1
     padding-top: 10px;
 }
 
-.navListContainer div:hover
+.navButton:hover
 {
     background-color: var(--celeste);
 }
@@ -115,6 +113,14 @@ h1
     color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+
+    .backgroundImage
+    {
+    height: 450px;
+    }  
+}
+
 .slogan 
 {
     color: var(--blanco);
@@ -123,17 +129,23 @@ h1
     margin-left: 20px;
 }
 
+.slogan span
+{
+    font-size: 40px;
+}
+
 @media screen and (min-width: 768px) {
 
     .slogan 
     {
-    padding-top: 50px;
-    }   
-}
-
-.slogan span
-{
-    font-size: 40px;
+    padding-top: 80px;
+    font-size: 45px;
+    } 
+    
+    .slogan span
+    {
+    font-size: 60px;
+    } 
 }
 
 .footerListContainer
@@ -485,6 +497,5 @@ footer h4
         width: 800px;
     }
 }
-
 
 
