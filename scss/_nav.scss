@@ -1,0 +1,44 @@
+.navListContainer
+{
+    background-color: var(--azul);
+    text-align: center;
+    list-style: none;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--blanco);
+
+        &:hover{
+            color: var(--negro);
+        }
+    }
+}
+
+/*
+@media screen and (min-width: 768px) {
+
+    .navListContainer
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        list-style: none;
+        height: 50px;
+        background-color: var(--azul);
+        text-align: center;
+    }    
+}
+*/
+
+.navButton:hover
+{
+    background-color: var(--celeste);
+}

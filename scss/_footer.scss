@@ -1,0 +1,51 @@
+.footerListContainer
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.footerDivContainer
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+
+    li:hover{
+        transform: scale(1.3,1.3);
+    }
+}
+
+footer
+{
+    text-align: center;
+    padding-top: 50px;
+
+    h4{
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    footer
+    {
+    text-align: center;
+    padding-top: 0px;
+    }    
+}
+
+.bi-linkedin, .bi-instagram, .bi-facebook
+{
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--celeste);
+}
+
+.bi-linkedin:hover, .bi-instagram:hover, .bi-facebook:hover
+{
+    color: var(--negro);
+}

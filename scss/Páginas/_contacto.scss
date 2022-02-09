@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+
+    .contactFormContainer
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 15px;
+    }
+
+    .contactFormDataContainer{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
+
+}
+
+.contactFormMessageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactUs
+{
+    text-align: center;
+
+    li{
+        list-style: none;
+    }
+
+    input{
+        width: 250px;
+        margin-bottom: 5px;
+        border-radius: 25px;
+        height: 30px;
+    }
+
+    label{
+        margin-top: 30px;
+    }
+
+    legend{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    textarea{
+        margin-top: 5px;
+        height: 180px;
+        width: 350px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.button
+{
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-weight: bold;
+}

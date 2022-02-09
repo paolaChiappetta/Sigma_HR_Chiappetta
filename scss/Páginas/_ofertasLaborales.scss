@@ -1,0 +1,19 @@
+/*Carousel*/
+.carousel{
+    padding-top: 10px;
+    width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel{
+        padding-top: 15px;
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .carousel{
+        padding-top: 20px;
+        width: 800px;
+    }
+}

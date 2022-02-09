@@ -1,0 +1,62 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+:root
+{
+--azul: #1f5996;
+--blanco: #ffffff;
+--negro: #212121;
+--gris: #a5a5a5;
+--celeste: #3fa9cf;
+--pastel: #d9e6e5;
+}
+
+body
+{
+    font-family: 'Lobster', cursive;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    background-image: url(./Imágenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .globalContainer
+    {
+        display: grid;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .globalDivContainer
+    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .globalDivContainerFooter
+    {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    }
+}
+
+h1
+{
+    font-family: 'Lobster', cursive;
+    color: var(--azul);
+    font-size: 70px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.sectionTitle
+{
+    text-align: center;
+    margin-top: 15px;
+}

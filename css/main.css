@@ -1,0 +1,322 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+:root {
+  --azul: #1f5996;
+  --blanco: #ffffff;
+  --negro: #212121;
+  --gris: #a5a5a5;
+  --celeste: #3fa9cf;
+  --pastel: #d9e6e5; }
+
+body {
+  font-family: 'Lobster', cursive;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  background-image: url(./Imágenes/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media screen and (min-width: 768px) {
+  .globalContainer {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr; }
+  .globalDivContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .globalDivContainerFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: end; } }
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: var(--azul);
+  font-size: 70px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px; }
+
+.sectionTitle {
+  text-align: center;
+  margin-top: 15px; }
+
+.navListContainer {
+  background-color: var(--azul);
+  text-align: center;
+  list-style: none; }
+  .navListContainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px; }
+  .navListContainer a {
+    text-decoration: none;
+    color: var(--blanco); }
+    .navListContainer a:hover {
+      color: var(--negro); }
+
+/*
+@media screen and (min-width: 768px) {
+
+    .navListContainer
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        list-style: none;
+        height: 50px;
+        background-color: var(--azul);
+        text-align: center;
+    }    
+}
+*/
+.navButton:hover {
+  background-color: var(--celeste); }
+
+.footerListContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr; }
+
+.footerDivContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  justify-content: center; }
+  .footerDivContainer li:hover {
+    transform: scale(1.3, 1.3); }
+
+footer {
+  text-align: center;
+  padding-top: 50px; }
+  footer h4 {
+    padding-bottom: 20px; }
+
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+    padding-top: 0px; } }
+
+.bi-linkedin, .bi-instagram, .bi-facebook {
+  font-size: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--celeste); }
+
+.bi-linkedin:hover, .bi-instagram:hover, .bi-facebook:hover {
+  color: var(--negro); }
+
+.backgroundImage {
+  background-image: url(../../Imágenes/rrhh2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: transparent; }
+
+@media screen and (min-width: 768px) {
+  .backgroundImage {
+    height: 450px; } }
+
+.slogan {
+  color: var(--blanco);
+  padding-top: 10px;
+  font-size: 25px;
+  margin-left: 20px; }
+  .slogan span {
+    font-size: 40px; }
+
+@media screen and (min-width: 768px) {
+  .slogan {
+    padding-top: 80px;
+    font-size: 45px; }
+    .slogan span {
+      font-size: 60px; } }
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center; }
+
+.aboutUsImage {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  width: 200px;
+  height: 200px; }
+
+.serviceSectionContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr; }
+
+@media screen and (min-width: 768px) {
+  .serviceSectionContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; } }
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--celeste);
+  margin: 30px 100px; }
+  .circle img {
+    width: 82px;
+    height: 82px;
+    margin-top: 35px; }
+
+/* Animaciones/transformaciones*/
+.magnifyingGlassIcon:hover {
+  animation: circleMove 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-delay: 0s; }
+
+@keyframes circleMove {
+  0% {
+    transform: translate(0px, 5px); }
+  5% {
+    transform: translate(1px, 4px); }
+  10% {
+    transform: translate(2px, 3px); }
+  15% {
+    transform: translate(3px, 2px); }
+  20% {
+    transform: translate(4px, 1px); }
+  25% {
+    transform: translate(5px, 0px); }
+  30% {
+    transform: translate(4px, -1px); }
+  35% {
+    transform: translate(3px, -2px); }
+  40% {
+    transform: translate(2px, -3px); }
+  45% {
+    transform: translate(1px, -4px); }
+  50% {
+    transform: translate(0px, -5px); }
+  55% {
+    transform: translate(-1px, -4px); }
+  60% {
+    transform: translate(-2px, -3px); }
+  65% {
+    transform: translate(-3px, -2px); }
+  70% {
+    transform: translate(-4px, -1px); }
+  75% {
+    transform: translate(-5px, 0px); }
+  80% {
+    transform: translate(-4px, 1px); }
+  85% {
+    transform: translate(-3px, 2px); }
+  90% {
+    transform: translate(-2px, 3px); }
+  95% {
+    transform: translate(-1px, 4px); }
+  100% {
+    transform: translate(0px, 5px); } }
+
+.graduationHatIcon:hover {
+  animation: sideMove 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  animation-delay: 0s; }
+
+@keyframes sideMove {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(-10deg); } }
+
+.quizIcon:hover {
+  animation: zoomAndsideMove 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-delay: 0s; }
+
+@keyframes zoomAndsideMove {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*Carousel*/
+.carousel {
+  padding-top: 10px;
+  width: 400px; }
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    padding-top: 15px;
+    width: 600px; } }
+
+@media screen and (min-width: 1280px) {
+  .carousel {
+    padding-top: 20px;
+    width: 800px; } }
+
+@media screen and (min-width: 768px) {
+  .contactFormContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 15px; }
+  .contactFormDataContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px; } }
+
+.contactFormMessageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.contactUs {
+  text-align: center; }
+  .contactUs li {
+    list-style: none; }
+  .contactUs input {
+    width: 250px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    height: 30px; }
+  .contactUs label {
+    margin-top: 30px; }
+  .contactUs legend {
+    margin-bottom: 20px;
+    margin-top: 20px; }
+  .contactUs textarea {
+    margin-top: 5px;
+    height: 180px;
+    width: 350px;
+    border-radius: 25px;
+    margin-bottom: 20px; }
+
+.button {
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-weight: bold; }
