@@ -14,7 +14,7 @@
 body {
   font-family: 'Lobster', cursive;
   font-family: 'Mochiy Pop P One', sans-serif;
-  background-image: url(./Imágenes/fondo2.jpg);
+  background-image: url(../Imágenes/fondo2.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -59,21 +59,16 @@ h1 {
     .navListContainer a:hover {
       color: var(--negro); }
 
-/*
 @media screen and (min-width: 768px) {
+  .navListContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    list-style: none;
+    height: 50px;
+    background-color: var(--azul);
+    text-align: center; } }
 
-    .navListContainer
-    {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 1fr;
-        list-style: none;
-        height: 50px;
-        background-color: var(--azul);
-        text-align: center;
-    }    
-}
-*/
 .navButton:hover {
   background-color: var(--celeste); }
 
@@ -112,7 +107,7 @@ footer {
   color: var(--negro); }
 
 .backgroundImage {
-  background-image: url(../../Imágenes/rrhh2.jpg);
+  background-image: url(../Imágenes/rrhh2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 250px;
@@ -297,7 +292,7 @@ footer {
   .contactUs li {
     list-style: none; }
   .contactUs input {
-    width: 250px;
+    width: 300px;
     margin-bottom: 5px;
     border-radius: 25px;
     height: 30px; }
@@ -312,6 +307,16 @@ footer {
     width: 350px;
     border-radius: 25px;
     margin-bottom: 20px; }
+  @media screen and (min-width: 1300px) {
+    .contactUs input {
+      width: 400px; }
+    .contactUs textarea {
+      width: 450px; } }
+  @media screen and (min-width: 1450px) {
+    .contactUs input {
+      width: 450px; }
+    .contactUs textarea {
+      width: 500px; } }
 
 .button {
   border-radius: 25px;
