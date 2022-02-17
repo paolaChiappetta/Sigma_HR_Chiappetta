@@ -12,3 +12,8 @@ $colores: (
     flex-direction: column;
     justify-content: center;
 };
+
+@mixin gridRows ($gridTemplateRows){
+    display: grid;
+    grid-template-rows: $gridTemplateRows;
+};

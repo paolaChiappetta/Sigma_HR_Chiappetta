@@ -25,9 +25,8 @@
 
     .navListContainer
     {
-        display: grid;
+        @include gridRows(1fr);
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 1fr;
         list-style: none;
         height: 50px;
         background-color: map-get($colores, primario);

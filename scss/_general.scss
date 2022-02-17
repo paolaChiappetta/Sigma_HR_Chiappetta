@@ -16,8 +16,7 @@ body
 @media screen and (min-width: 768px) {
     .globalContainer
     {
-        display: grid;
-        grid-template-rows: 1fr 2fr 1fr;
+        @include gridRows(1fr 2fr 1fr);
     }
 
     .globalDivContainer

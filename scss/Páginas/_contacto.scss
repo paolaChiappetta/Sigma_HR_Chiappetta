@@ -2,15 +2,13 @@
 
     .contactFormContainer
     {
-        display: grid;
+        @include gridRows(1fr);  
         grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-rows: 1fr;
         column-gap: 15px;
     }
 
     .contactFormDataContainer{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        @include gridRows(1fr 1fr 1fr);
         row-gap: 10px;
     }
 

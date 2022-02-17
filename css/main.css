@@ -56,8 +56,8 @@ h1 {
 @media screen and (min-width: 768px) {
   .navListContainer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
     list-style: none;
     height: 50px;
     background-color: #1f5996;
@@ -68,8 +68,8 @@ h1 {
 
 .footerListContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr); }
 
 .footerDivContainer {
   display: flex;
@@ -147,8 +147,8 @@ footer {
 @media screen and (min-width: 768px) {
   .serviceSectionContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr; } }
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 .sectionContainer {
   display: flex;
@@ -264,8 +264,8 @@ footer {
 @media screen and (min-width: 768px) {
   .contactFormContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     column-gap: 15px; }
   .contactFormDataContainer {
     display: grid;
