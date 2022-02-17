@@ -3,14 +3,6 @@
   padding: 0;
   margin: 0; }
 
-:root {
-  --azul: #1f5996;
-  --blanco: #ffffff;
-  --negro: #212121;
-  --gris: #a5a5a5;
-  --celeste: #3fa9cf;
-  --pastel: #d9e6e5; }
-
 body {
   font-family: 'Lobster', cursive;
   font-family: 'Mochiy Pop P One', sans-serif;
@@ -33,7 +25,7 @@ body {
 
 h1 {
   font-family: 'Lobster', cursive;
-  color: var(--azul);
+  color: #1f5996;
   font-size: 70px;
   text-align: center;
   margin: 20px;
@@ -44,7 +36,7 @@ h1 {
   margin-top: 15px; }
 
 .navListContainer {
-  background-color: var(--azul);
+  background-color: #1f5996;
   text-align: center;
   list-style: none; }
   .navListContainer div {
@@ -55,9 +47,9 @@ h1 {
     padding-top: 10px; }
   .navListContainer a {
     text-decoration: none;
-    color: var(--blanco); }
+    color: #ffffff; }
     .navListContainer a:hover {
-      color: var(--negro); }
+      color: #212121; }
 
 @media screen and (min-width: 768px) {
   .navListContainer {
@@ -66,11 +58,11 @@ h1 {
     grid-template-rows: 1fr;
     list-style: none;
     height: 50px;
-    background-color: var(--azul);
+    background-color: #1f5996;
     text-align: center; } }
 
 .navButton:hover {
-  background-color: var(--celeste); }
+  background-color: #3fa9cf; }
 
 .footerListContainer {
   display: grid;
@@ -101,10 +93,10 @@ footer {
   font-size: 40px;
   margin-left: 20px;
   margin-right: 20px;
-  color: var(--celeste); }
+  color: #3fa9cf; }
 
 .bi-linkedin:hover, .bi-instagram:hover, .bi-facebook:hover {
-  color: var(--negro); }
+  color: #212121; }
 
 .backgroundImage {
   background-image: url(../Imágenes/rrhh2.jpg);
@@ -121,7 +113,7 @@ footer {
     height: 450px; } }
 
 .slogan {
-  color: var(--blanco);
+  color: #ffffff;
   padding-top: 10px;
   font-size: 25px;
   margin-left: 20px; }
@@ -169,7 +161,7 @@ footer {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: var(--celeste);
+  background: #3fa9cf;
   margin: 30px 100px; }
   .circle img {
     width: 82px;
@@ -322,6 +314,6 @@ footer {
   border-radius: 25px;
   margin-top: 5px;
   margin-bottom: 15px;
-  background-color: var(--azul);
-  color: var(--blanco);
+  background-color: #1f5996;
+  color: #ffffff;
   font-weight: bold; }

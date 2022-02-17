@@ -1,6 +1,6 @@
 .navListContainer
 {
-    background-color: var(--azul);
+    background-color: map-get($colores, primario);
     text-align: center;
     list-style: none;
 
@@ -14,10 +14,10 @@
 
     a{
         text-decoration: none;
-        color: var(--blanco);
+        color: map-get($colores, blanco);
 
         &:hover{
-            color: var(--negro);
+            color: map-get($colores, negro);
         }
     }
 }
@@ -32,12 +32,12 @@
         grid-template-rows: 1fr;
         list-style: none;
         height: 50px;
-        background-color: var(--azul);
+        background-color: map-get($colores, primario);
         text-align: center;
     }    
 }
 
 .navButton:hover
 {
-    background-color: var(--celeste);
+    background-color: map-get($colores, secundario);
 }

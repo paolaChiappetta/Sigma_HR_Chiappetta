@@ -4,16 +4,6 @@
     margin: 0;
 }
 
-:root
-{
---azul: #1f5996;
---blanco: #ffffff;
---negro: #212121;
---gris: #a5a5a5;
---celeste: #3fa9cf;
---pastel: #d9e6e5;
-}
-
 body
 {
     font-family: 'Lobster', cursive;
@@ -48,7 +38,7 @@ body
 h1
 {
     font-family: 'Lobster', cursive;
-    color: var(--azul);
+    color: map-get($colores, primario);
     font-size: 70px;
     text-align: center;
     margin: 20px;

@@ -20,7 +20,7 @@
 
 .slogan 
 {
-    color: var(--blanco);
+    color: map-get($colores, blanco);
     padding-top: 10px;
     font-size: 25px;
     margin-left: 20px;

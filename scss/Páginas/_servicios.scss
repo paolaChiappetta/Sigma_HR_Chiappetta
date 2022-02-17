@@ -27,7 +27,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: var(--celeste);
+    background: map-get($colores, secundario);
     margin:30px 100px;
 
     img{

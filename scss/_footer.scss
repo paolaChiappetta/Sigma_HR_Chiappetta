@@ -42,10 +42,10 @@ footer
     font-size: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    color: var(--celeste);
+    color: map-get($colores, secundario);
 }
 
 .bi-linkedin:hover, .bi-instagram:hover, .bi-facebook:hover
 {
-    color: var(--negro);
+    color: map-get($colores, negro);
 }

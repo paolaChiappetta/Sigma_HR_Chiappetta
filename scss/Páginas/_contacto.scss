@@ -81,7 +81,7 @@
     border-radius: 25px;
     margin-top: 5px;
     margin-bottom: 15px;
-    background-color: var(--azul);
-    color: var(--blanco);
+    background-color: map-get($colores, primario);
+    color: map-get($colores, blanco);
     font-weight: bold;
 }
