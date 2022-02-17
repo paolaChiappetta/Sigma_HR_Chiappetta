@@ -6,3 +6,9 @@ $colores: (
     negro: #212121,
     gris: #a5a5a5
 );
+
+%flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+};

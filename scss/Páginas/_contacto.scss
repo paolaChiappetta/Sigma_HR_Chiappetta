@@ -17,9 +17,7 @@
 }
 
 .contactFormMessageContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @extend %flexColumn;
     align-items: center;
 }
 

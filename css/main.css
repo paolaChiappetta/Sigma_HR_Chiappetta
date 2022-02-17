@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.navListContainer div, .aboutUs, .contactFormMessageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 * {
   padding: 0;
   margin: 0; }
@@ -40,9 +45,6 @@ h1 {
   text-align: center;
   list-style: none; }
   .navListContainer div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-bottom: 10px;
     padding-top: 10px; }
   .navListContainer a {
@@ -128,9 +130,6 @@ footer {
       font-size: 60px; } }
 
 .aboutUs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center; }
 
@@ -274,9 +273,6 @@ footer {
     row-gap: 10px; } }
 
 .contactFormMessageContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center; }
 
 .contactUs {

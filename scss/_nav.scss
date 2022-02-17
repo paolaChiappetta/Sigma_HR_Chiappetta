@@ -5,9 +5,7 @@
     list-style: none;
 
     div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @extend %flexColumn;
         padding-bottom: 10px;
         padding-top: 10px;
     }

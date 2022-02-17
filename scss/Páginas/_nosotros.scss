@@ -1,8 +1,6 @@
 .aboutUs
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @extend %flexColumn;
     text-align: center;
     align-items: center;
 }
