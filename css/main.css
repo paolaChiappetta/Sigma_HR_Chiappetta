@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navListContainer div, .aboutUs, .contactFormMessageContainer {
+.navListContainer section, .aboutUs, .contactFormMessageContainer {
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -44,7 +44,7 @@ h1 {
   background-color: #1f5996;
   text-align: center;
   list-style: none; }
-  .navListContainer div {
+  .navListContainer section {
     padding-bottom: 10px;
     padding-top: 10px; }
   .navListContainer a {
