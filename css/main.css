@@ -414,8 +414,10 @@ footer {
 
 .button {
   border-radius: 25px;
-  margin-top: 5px;
-  margin-bottom: 15px;
   background-color: #1f5996;
   color: #ffffff;
   font-weight: bold; }
+
+.buttonLi {
+  margin-top: 15px;
+  margin-bottom: 35px; }
