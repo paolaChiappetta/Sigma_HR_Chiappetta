@@ -277,7 +277,7 @@ footer {
 .magnifyingGlassIcon:hover {
   animation: circleMove 0.5s;
   animation-iteration-count: infinite;
-  animation-duration: 0.2s;
+  animation-duration: 0.4s;
   animation-delay: 0s; }
 
 @keyframes circleMove {
@@ -351,6 +351,70 @@ footer {
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+
+.headIcon:hover {
+  animation: rotateYMove 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-delay: 0s; }
+
+@keyframes rotateYMove {
+  0% {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(180deg); }
+  100% {
+    transform: rotateY(0deg); } }
+
+.laptopIcon:hover {
+  animation: sideXMove 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-delay: 0s; }
+
+@keyframes sideXMove {
+  0% {
+    transform: translate(0px, 5px); }
+  5% {
+    transform: translate(0px, 4px); }
+  10% {
+    transform: translate(0px, 3px); }
+  15% {
+    transform: translate(0px, 2px); }
+  20% {
+    transform: translate(0px, 1px); }
+  25% {
+    transform: translate(0px, 0px); }
+  30% {
+    transform: translate(0px, -1px); }
+  35% {
+    transform: translate(0px, -2px); }
+  40% {
+    transform: translate(0px, -3px); }
+  45% {
+    transform: translate(0px, -4px); }
+  50% {
+    transform: translate(0px, -5px); }
+  55% {
+    transform: translate(0px, -4px); }
+  60% {
+    transform: translate(0px, -3px); }
+  65% {
+    transform: translate(0px, -2px); }
+  70% {
+    transform: translate(0px, -1px); }
+  75% {
+    transform: translate(0px, 0px); }
+  80% {
+    transform: translate(0px, 1px); }
+  85% {
+    transform: translate(0px, 2px); }
+  90% {
+    transform: translate(0px, 3px); }
+  95% {
+    transform: translate(0px, 4px); }
+  100% {
+    transform: translate(0px, 5px); } }
 
 /*Carousel*/
 .carousel {
