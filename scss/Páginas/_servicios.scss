@@ -1,15 +1,28 @@
 .serviceSectionContainer
 {
     @include gridRows(1fr 1fr 1fr);  
-}    
+}
 
-@media screen and (min-width: 768px) {
+.serviceSectionContainer2
+{
+    @include gridRows(1fr 1fr);  
+}  
+
+@media screen and (min-width: 1050px) {
 
     .serviceSectionContainer
     {
         @include gridRows(1fr);  
         grid-template-columns: 1fr 1fr 1fr;
     }    
+
+    .serviceSectionContainer2
+    {
+        margin-top: 50px;
+        @include gridRows(1fr);  
+        grid-template-columns:1fr 1fr;
+        margin-bottom: 25px;
+    }  
 }
 
 .sectionContainer
@@ -18,7 +31,63 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-} 
+
+    section a{
+        text-decoration: none;
+        color: map-get($colores, negro);
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.sectionContainerLeft
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    section a{
+        text-decoration: none;
+        color: map-get($colores, negro);
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.sectionContainerRight
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    section a{
+        text-decoration: none;
+        color: map-get($colores, negro);
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+
+    .sectionContainerLeft
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: center;
+    }
+
+    .sectionContainerRight
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+}
 
 .circle
 {

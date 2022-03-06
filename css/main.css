@@ -200,17 +200,66 @@ footer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr; }
 
-@media screen and (min-width: 768px) {
+.serviceSectionContainer2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr; }
+
+@media screen and (min-width: 1050px) {
   .serviceSectionContainer {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr 1fr; }
+  .serviceSectionContainer2 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 25px; } }
 
 .sectionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center; }
+  .sectionContainer section a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold; }
+
+.sectionContainerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .sectionContainerLeft section a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold; }
+
+.sectionContainerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .sectionContainerRight section a {
+    text-decoration: none;
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold; }
+
+@media screen and (min-width: 1050px) {
+  .sectionContainerLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center; }
+  .sectionContainerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center; } }
 
 .circle {
   width: 150px;
