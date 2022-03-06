@@ -90,7 +90,8 @@ footer {
       padding-bottom: 10px; }
   footer h4 {
     padding-bottom: 20px;
-    padding-top: 15px; }
+    padding-top: 15px;
+    font-size: 15px; }
   @media screen and (min-width: 900px) {
     footer .footerGrid {
       display: grid;
