@@ -14,19 +14,9 @@ body {
   background-image: url(../Imágenes/fondo2.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
-
-@media screen and (min-width: 768px) {
-  .globalContainer {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr; }
-  .globalDivContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .globalDivContainerFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: end; } }
+  body ul {
+    margin: 0;
+    padding: 0; }
 
 h1 {
   font-family: 'Lobster', cursive;
@@ -53,7 +43,7 @@ h1 {
     .navListContainer a:hover {
       color: #212121; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .navListContainer {
     display: grid;
     grid-template-rows: 1fr;
