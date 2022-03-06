@@ -10,10 +10,7 @@
 
 body {
   font-family: 'Lobster', cursive;
-  font-family: 'Mochiy Pop P One', sans-serif;
-  background-image: url(../Imágenes/fondo2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  font-family: 'Mochiy Pop P One', sans-serif; }
   body ul {
     margin: 0;
     padding: 0; }
@@ -26,9 +23,24 @@ h1 {
   margin: 20px;
   padding: 10px; }
 
-.sectionTitle {
-  text-align: center;
-  margin-top: 15px; }
+.images {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr); }
+
+.lineLeft {
+  background-image: url(../Imágenes/left.jpg);
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.lineRight {
+  background-image: url(../Imágenes/right.jpg);
+  background-repeat: no-repeat;
+  background-position: left; }
+
+.logo {
+  display: block;
+  margin: auto; }
 
 .navListContainer {
   background-color: #1f5996;

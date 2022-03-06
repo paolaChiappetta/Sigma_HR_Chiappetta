@@ -8,9 +8,9 @@ body
 {
     font-family: 'Lobster', cursive;
     font-family: 'Mochiy Pop P One', sans-serif;
-    background-image: url(../Imágenes/fondo2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    //background-image: url(../Imágenes/fondo2.jpg);
+    //background-repeat: no-repeat;
+    //background-size: cover;
 
     ul {
         margin: 0; 
@@ -28,8 +28,25 @@ h1
     padding: 10px;
 }
 
-.sectionTitle
+.images{
+    @include gridRows(1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lineLeft{
+    background-image: url(../Imágenes/left.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.lineRight{
+    background-image: url(../Imágenes/right.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.logo
 {
-    text-align: center;
-    margin-top: 15px;
+    display: block;
+    margin: auto;
 }
