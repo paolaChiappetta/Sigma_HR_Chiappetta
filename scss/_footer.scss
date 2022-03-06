@@ -1,3 +1,53 @@
+footer{
+
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    background-color: map-get($colores, primario);
+    margin-top: 5px;
+    
+    iframe{
+        margin: auto;
+    }
+
+    section{
+        padding-top: 15px;
+
+        h3{
+            padding-bottom: 15px;
+        }
+
+        p{
+            padding-bottom: 10px;
+        }
+    }
+
+    h4{
+        padding-bottom: 20px;
+        padding-top: 15px;
+    }
+
+    @media screen and (min-width: 900px) {
+        .footerGrid{
+        @include gridRows(1fr);
+        grid-template-columns: repeat(3, 1fr);
+        height: 200px;
+        }
+
+        section{
+            padding-top: 15px;
+    
+            h3{
+                padding-bottom: 15px;
+            }
+    
+            p{
+                padding-bottom: 10px;
+            }
+        }
+    }  
+}
+
 .footerListContainer
 {
     @include gridRows(1fr);  
@@ -14,16 +64,6 @@
 
     li:hover{
         transform: scale(1.3,1.3);
-    }
-}
-
-footer
-{
-    text-align: center;
-    padding-top: 50px;
-
-    h4{
-        padding-bottom: 20px;
     }
 }
 

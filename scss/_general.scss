@@ -8,9 +8,6 @@ body
 {
     font-family: 'Lobster', cursive;
     font-family: 'Mochiy Pop P One', sans-serif;
-    //background-image: url(../Imágenes/fondo2.jpg);
-    //background-repeat: no-repeat;
-    //background-size: cover;
 
     ul {
         margin: 0; 
@@ -49,4 +46,10 @@ h1
 {
     display: block;
     margin: auto;
+    margin-bottom: 10px;
+}
+
+.sectionTitle{
+    text-align: center;
+    margin-top: 15px;
 }
