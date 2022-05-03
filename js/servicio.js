@@ -70,15 +70,13 @@ const cargaServiciosJson = async () => {
         let service = document.createElement("div");
         service.className = "service";
         box.appendChild(service);
-        //genero img para el logo
-        let img = document.createElement("img"); 
+        //asigno el logo según categoría 
         let logo = (servicio.categoria == 1) ? 
         "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/60/000000/external-interviews-job-search-flaticons-lineal-color-flat-icons.png" :
         (servicio.categoria == 2) ?
         "https://img.icons8.com/dusk/64/000000/mind-map--v1.png" :
         "https://img.icons8.com/external-justicon-lineal-color-justicon/60/000000/external-exam-back-to-school-justicon-lineal-color-justicon.png";
-        img.src = logo;
-        //service.appendChild(img);
+        
         service.innerHTML = `<img src=${logo}/>
                             <h4>${servicio.nombre}</h4>
                             <p>Valor: ${servicio.valor}</p>
