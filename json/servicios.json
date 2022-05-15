@@ -1,40 +1,48 @@
 [
     {
+        "id": 1,
         "categoria": 1,
         "nombre": "Entrevista inicial",
         "valor": "1500"
     },
     {
+        "id": 2,
         "categoria": 1,
         "nombre": "Entrevista técnica",
         "valor": "2500"
     },
     {
+        "id": 3,
         "categoria": 1,
         "nombre": "Entrevista grupal",
         "valor": "2000"
     },
     {
+        "id": 4,
         "categoria": 2,
         "nombre": "Test de personalidad",
         "valor": "3000"
     },
     {
+        "id": 5,
         "categoria": 2,
         "nombre": "Test de atención y concentración",
         "valor": "4000"
     },
     {
+        "id": 6,
         "categoria": 2,
         "nombre": "Test de razonamiento",
         "valor": "4500"
     },
     {
+        "id": 7,
         "categoria": 3,
         "nombre": "Prueba IT - Java Jr",
         "valor": "4500"
     },
     {
+        "id": 8,
         "categoria": 3,
         "nombre": "Prueba IT - PHP Jr",
         "valor": "4500"
