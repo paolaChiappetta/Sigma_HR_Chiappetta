@@ -67,93 +67,33 @@
         <!-- main -->
         <main>
             <h2 class="sectionTitle">Contratar nuestros servicios</h2>
-            <div class="hiringServiceContainer"></div>
-            <!--
-            <div class="serviceSectionContainer">
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/60/000000/external-interviews-job-search-flaticons-lineal-color-flat-icons.png"/>
-                        <h4>Entrevista inicial</h4>
-                        <p>Valor: $1500</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div>
-                </div> 
-               <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/60/000000/external-interviews-job-search-flaticons-lineal-color-flat-icons.png"/>
-                        <h4>Entrevista técnica</h4>
-                        <p>Valor: $2500</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div>
-               </div> 
-               <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/60/000000/external-interviews-job-search-flaticons-lineal-color-flat-icons.png"/>
-                        <h4>Entrevista grupal</h4>
-                        <p>Valor: $2000</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div>
-               </div>  
+            <br>
+            <!--Filtro por categoría-->
+            <div>
+                <form class="serviceFilterForm">
+                    <label>Filtrar servicios por categoría:</label>
+                    <input type="radio" name="categoriaFiltro" value="0" required>
+                    <label>Todos</label>
+                    <input type="radio" name="categoriaFiltro" value="1" required>
+                    <label>Entrevistas</label>
+                    <input type="radio" name="categoriaFiltro" value="2" required>
+                    <label>Test Psicotécnicos</label>
+                    <input type="radio" name="categoriaFiltro" value="3" required>
+                    <label>Pruebas técnicas IT</label>
+                    <button type="submit">Cargar</button>
+                </form>
             </div>
-            <div class="serviceSectionContainer">
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/dusk/64/000000/mind-map--v1.png"/>
-                        <h4>Test de personalidad</h4>
-                        <p>Valor: $3500</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/dusk/64/000000/mind-map--v1.png"/>
-                        <h4>Test de atención y concentración</h4>
-                        <p>Valor: $4000</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                     </div>
-                </div> 
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/dusk/64/000000/mind-map--v1.png"/>
-                        <h4>Test de razonamiento</h4>
-                        <p>Valor: $2800</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                     </div> 
-                </div>
-             </div>
-             <div class="serviceSectionContainer">
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-justicon-lineal-color-justicon/60/000000/external-exam-back-to-school-justicon-lineal-color-justicon.png"/>
-                        <h4>Prueba IT - Java Jr</h4>
-                        <p>Valor: $3500</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-justicon-lineal-color-justicon/60/000000/external-exam-back-to-school-justicon-lineal-color-justicon.png"/>
-                        <h4>Prueba IT - Javascript</h4>
-                        <p>Valor: $4000</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                    </div> 
-                </div> 
-                <div class="box">
-                    <div class="service">
-                        <img src="https://img.icons8.com/external-justicon-lineal-color-justicon/60/000000/external-exam-back-to-school-justicon-lineal-color-justicon.png"/>
-                        <h4>Prueba IT - PHP Jr</h4>
-                        <p>Valor: $2800</p>
-                        <button class="cartButton">Añadir al carrito</button>
-                     </div> 
-                </div>
-             </div>
-             -->
-             <div class="buttonAddContainer">
+            <br>
+            <!--Espacio para los servicios a contratar-->
+            <div class="hiringServiceContainer"></div>
+            <!--Botón para que el admin cargue nuevos servicios-->
+            <div class="buttonAddContainer">
                 <button class="addServiceButton">Cargar nuevos servicios</button>
-             </div>
-             <div class="addServiceForm">
+            </div>
+            <!--Form para la carga de nuevos servicios-->
+            <div class="addServiceForm">
                 <h2 class="sectionTitle">Cargar servicios</h2>
-                <form id="form">
+                <form class="form">
                     <label>Categoría:</label>
                     <input type="radio" name="categoria" value="1" required>
                     <label>Entrevistas</label>
@@ -167,7 +107,7 @@
                     <input type="number" required>
                     <button type="submit">Cargar</button>
                 </form> 
-             </div>
+            </div>
         </main>
         <!-- end main -->
     </section> 
