@@ -1,3 +1,26 @@
+.hiringContainer{
+    @include gridRows(1fr);
+}
+
+.hiringServiceSectionContainer
+{
+    @include gridRows(1fr 1fr 1fr);  
+}
+
+@media screen and (min-width: 1050px) {
+
+    .hiringContainer{
+        @include gridRows(1fr);
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .hiringServiceSectionContainer
+    {
+        @include gridRows(1fr);  
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+}
+
 .box
 {
     display: flex;
@@ -23,7 +46,7 @@
 
 .cartButton{
    border-radius: 20px;
-   background-color: #1f5996;
+   background-color: map-get($colores, primario);
    color: #ffffff;
    font-weight: bold;
    margin-top: 10px;
@@ -47,3 +70,117 @@
     padding: 10px;
 }
 
+.cartContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: map-get($colores, primario);
+
+    h3{
+        margin-top: 5px;
+        margin-left: 3px;
+        margin-bottom: 10px;
+        color: map-get($colores, blanco);
+        font-weight: normal;
+    }
+}
+
+.cartTable{
+    width: 100%;
+    font-weight:100;
+
+    thead{
+        width: 100%;
+
+        tr{
+            width: 100%;
+            @include gridRows(1fr);  
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    tbody{
+        width: 100%;
+
+        tr{
+            width: 100%;
+            @include gridRows(1fr);  
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.cartColumns{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: map-get($colores, blanco);
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.cartButtonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cartButton{
+    border-radius: 15px;
+    background-color: map-get($colores, blanco);
+    color: map-get($colores, primario);
+    font-size: large;
+    font-weight: bold;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.totalCart{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p{
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 98%;
+        border-radius: 5px;
+    }
+}
+
+.serviceFilterForm{
+    margin-left: 30px;
+    margin-bottom: 10px;
+
+    label{
+        margin-right: 30px;
+    }
+}
+
+.filterButton{
+    border-radius: 20px;
+    background-color: #1f5996;
+    color: #ffffff;
+    font-size: large;
+    font-weight: normal;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cartColumnsInfo{
+    color: map-get($colores, negro);
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 1px;
+}

@@ -54,7 +54,7 @@
                             <li><a href="./contratar.html">Contratar</a></li>
                         </section>
                         <section>
-                            <li><a href="./contacto.html">Contacto</a></li>
+                            <li><button>Enable body scrolling</button></li>
                         </section>
                         <section></section>
                     </ul>
@@ -68,24 +68,52 @@
         <main>
             <h2 class="sectionTitle">Contratar nuestros servicios</h2>
             <br>
-            <!--Filtro por categoría-->
-            <div>
-                <form class="serviceFilterForm">
-                    <label>Filtrar servicios por categoría:</label>
-                    <input type="radio" name="categoriaFiltro" value="0" required>
-                    <label>Todos</label>
-                    <input type="radio" name="categoriaFiltro" value="1" required>
-                    <label>Entrevistas</label>
-                    <input type="radio" name="categoriaFiltro" value="2" required>
-                    <label>Test Psicotécnicos</label>
-                    <input type="radio" name="categoriaFiltro" value="3" required>
-                    <label>Pruebas técnicas IT</label>
-                    <button type="submit">Cargar</button>
-                </form>
+            
+            <div class="hiringContainer">
+                <div>
+                    <!--Filtro por categoría-->
+                    <div>
+                        <form class="serviceFilterForm">
+                            <label>Filtrar servicios por categoría:</label><br>
+                            <input type="radio" name="categoriaFiltro" value="0" required>
+                            <label>Todos</label>
+                            <input type="radio" name="categoriaFiltro" value="1" required>
+                            <label>Entrevistas</label>
+                            <input type="radio" name="categoriaFiltro" value="2" required>
+                            <label>Test Psicotécnicos</label>
+                            <input type="radio" name="categoriaFiltro" value="3" required>
+                            <label>Pruebas técnicas IT</label>
+                            <button class="filterButton" type="submit">Filtrar</button>
+                        </form>
+                    </div>
+                    <!--Espacio para los servicios a contratar-->
+                    <div class="hiringServiceContainer"></div>
+                </div>
+                <div>
+                    <!--Aside-->
+                    <!--Carrito-->
+                    <aside class="cartContainer">
+                        <div>
+                            <h3>Su carrito</h3>
+                            <table class="cartTable">
+                                <thead>
+                                    <tr>
+                                        <th class="cartColumns">Servicio</th>
+                                        <th class="cartColumns">Cantidad</th>
+                                        <th class="cartColumns">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cartHiredServices"></tbody>
+                            </table>
+                            <div class="totalCart">
+                                <p id="cartTotal">Total: $0</p>
+                            </div>
+                        <div class="cartButtonContainer">
+                            <button class="cartButton">Contratar</button>
+                        </div>
+                    </aside>
+                </div>
             </div>
-            <br>
-            <!--Espacio para los servicios a contratar-->
-            <div class="hiringServiceContainer"></div>
             <!--Botón para que el admin cargue nuevos servicios-->
             <div class="buttonAddContainer">
                 <button class="addServiceButton">Cargar nuevos servicios</button>
@@ -142,7 +170,10 @@
         </footer>
         <!-- end footer -->
     </section>
+    <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Js-->
+    <script src="../js/carrito.js"></script>
     <script src="../js/servicio.js"></script>
 </body>
 </html>

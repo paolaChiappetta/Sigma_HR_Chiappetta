@@ -18,7 +18,7 @@ const cargaServiciosJson = async (filtroCategoria) => {
     
     //genero la clase contenedora 
     let serviceContainer = document.createElement("div");
-    serviceContainer.className = "serviceSectionContainer";
+    serviceContainer.className = "hiringServiceSectionContainer";
 
     let arrayFiltradoPorCategoria;
     if(filtroCategoria != 0){
@@ -45,13 +45,14 @@ const cargaServiciosJson = async (filtroCategoria) => {
         service.innerHTML = `<img src=${logo}/>
                             <h4>${servicio.nombre}</h4>
                             <p>Valor: ${servicio.valor}</p>
-                            <button id= "cartButton${servicio.id}" class="cartButton">Añadir al carrito</button>`
+                            <button id="cartButton${servicio.id}" class="cartButton">Añadir al carrito</button>`
             
         serviceContainer.appendChild(box);
         hiringServiceContainer[0].appendChild(serviceContainer);
         //agrego la funcionalidad al botón
         let boton = document.getElementById(`cartButton${servicio.id}`);
-        boton.addEventListener("click", agregarServicio);
+        boton.onclick = () => { agregarServicio(servicio)}
+        //boton.addEventListener("click", agregarServicio(servicio));
 
     });
 }
