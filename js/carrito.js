@@ -19,6 +19,10 @@ let primerIngresoCarrito = true;
 
 let carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
 
+let hireServicesButton = document.getElementById("hireServicesButton");
+
+hireServicesButton.onclick = () => { contratar()};
+
 if(primerIngresoCarrito){
     cartHiredServicesContainer.innerHTML = "";
     if(carritoLocalStorage){;
@@ -62,9 +66,7 @@ async function agregarServicio (servicio){
             title: 'No se ha agregado el servicio',
             text: 'Debes seleccionar la cantidad para agregarlo'
           })
-    }
-    
-    //falta incorporar función para sumar en el carrito  
+    } 
 }
 
 function cargaServicioCarrito (servicio, cantidad){
@@ -79,29 +81,39 @@ function cargaServicioCarrito (servicio, cantidad){
 
     if(!servicioCargado || primerIngresoCarrito){
         cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
-                                        <td class="cartColumnsInfo">${servicioCarrito.cantidad}</td>
-                                        <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`
+                                                <td class="cartColumnsInfo">
+                                                <button id="increaseButton${servicioCarrito.id}">+</button>
+                                                <p>${servicioCarrito.cantidad}</p>
+                                                <button id="decreaseButton${servicioCarrito.id}">-</button>
+                                                </td>
+                                                <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`;
+
+        let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
+        botonAumentar.onclick = () => { incrementarServicio(servicio)}
+
+        let botonDecrementar = document.getElementById(`decreaseButton${servicioCarrito.id}`);
+        botonDecrementar.onclick = () => { decrementarServicio(servicio)}
     }
     
 }
 
 function verificarServicioEnLocalStorage(servicio, cantidad){
     let existe = false;
-    let arrayLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
+    carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
     let existente = null;
 
-    if(arrayLocalStorage != null){
-        existente = arrayLocalStorage.find((serv) => serv.id == servicio.id);
+    if(carritoLocalStorage != null){
+        existente = carritoLocalStorage.find((serv) => serv.id == servicio.id);
     }
     
     if(existente){
-        let index = arrayLocalStorage.findIndex((serv) => serv.id == existente.id);
-        cant = parseInt(arrayLocalStorage[index].cantidad) + parseInt(cantidad);
-        totalServicio = cant * parseInt(arrayLocalStorage[index].valor);
-        arrayLocalStorage[index].cantidad = cant;
-        arrayLocalStorage[index].total = totalServicio;
-        localStorage.setItem("arrayCart", JSON.stringify(arrayLocalStorage));
-        carrito = arrayLocalStorage;
+        let index = carritoLocalStorage.findIndex((serv) => serv.id == existente.id);
+        let cant = parseInt(carritoLocalStorage[index].cantidad) + parseInt(cantidad);
+        let totalServicio = cant * parseInt(carritoLocalStorage[index].valor);
+        carritoLocalStorage[index].cantidad = cant;
+        carritoLocalStorage[index].total = totalServicio;
+        localStorage.setItem("arrayCart", JSON.stringify(carritoLocalStorage));
+        carrito = carritoLocalStorage;
         recargarCarrito();
         existe = true;
     }else{
@@ -125,9 +137,82 @@ function recargarCarrito(){
     cartHiredServicesContainer.innerHTML = "";
     for(let servicioCarrito of carrito){
         cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
-                                        <td class="cartColumnsInfo">${servicioCarrito.cantidad}</td>
-                                        <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`
+                                                <td class="cartColumnsInfo">
+                                                <button id="increaseButton${servicioCarrito.id}">+</button>
+                                                <p>${servicioCarrito.cantidad}</p>
+                                                <button id="decreaseButton${servicioCarrito.id}">-</button>
+                                                </td>
+                                                <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`;
+
+        let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
+        botonAumentar.onclick = () => { incrementarServicio(servicioCarrito)}
+
+        let botonDecrementar = document.getElementById(`decreaseButton${servicioCarrito.id}`);
+        botonDecrementar.onclick = () => { decrementarServicio(servicioCarrito)}
     }
 
     totalCarrito(carrito);
+}
+
+function incrementarServicio(servicio){
+    carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
+    let i = carritoLocalStorage.findIndex((serv) => serv.id == servicio.id);
+
+    let cant = parseInt(carritoLocalStorage[i].cantidad) + 1;
+    let totalServicio = cant * parseInt(carritoLocalStorage[i].valor);
+    carritoLocalStorage[i].cantidad = cant;
+    carritoLocalStorage[i].total = totalServicio;
+    localStorage.setItem("arrayCart", JSON.stringify(carritoLocalStorage));
+    carrito = carritoLocalStorage;
+    recargarCarrito();
+}
+
+function decrementarServicio(servicio){
+    if(servicio.cantidad == 1){
+        eliminarServicioDelCarrito(servicio);
+    }else{
+        carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
+        let pos = carritoLocalStorage.findIndex((serv) => serv.id == servicio.id);
+
+        let cant = parseInt(carritoLocalStorage[pos].cantidad) - 1;
+        let totalServicio = cant * parseInt(carritoLocalStorage[pos].valor);
+        carritoLocalStorage[pos].cantidad = cant;
+        carritoLocalStorage[pos].total = totalServicio;
+        localStorage.setItem("arrayCart", JSON.stringify(carritoLocalStorage));
+        carrito = carritoLocalStorage;
+        recargarCarrito();
+    }
+}
+
+function eliminarServicioDelCarrito(servicio){
+    carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
+    let posicion = carritoLocalStorage.findIndex((serv) => serv.id == servicio.id);
+
+    carritoLocalStorage.remove(carritoLocalStorage[posicion]);
+    localStorage.setItem("arrayCart", JSON.stringify(carritoLocalStorage));
+
+    carrito = carritoLocalStorage;
+
+    recargarCarrito();
+}
+
+function contratar(){
+    carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
+
+    if(carrito !=null){
+        Swal.fire({
+            icon: 'success',
+            title: 'Muchas gracias por elegirnos!',
+            text: 'Nos pondremos en contacto para resolver los pasos a seguir'
+          })
+          carrito = [];
+          localStorage.setItem("arrayCart", JSON.stringify(carrito));
+          recargarCarrito();
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'No tiene ningún servicio cargado',
+            text: 'Debes presionar el botón "Agregar al carrito"'
+          })
+    }
 }
