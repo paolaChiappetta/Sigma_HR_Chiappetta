@@ -49,6 +49,7 @@ async function agregarServicio (servicio){
             title: 'Felicitaciones!',
             text: 'Servicio agregado correctamente'
           })
+
     }else if(cantidad<0){
         Swal.fire({
             icon: 'error',
@@ -70,7 +71,7 @@ function cargaServicioCarrito (servicio, cantidad){
     let servicioCarrito;
     let servicioCargado = false;
     if(!primerIngresoCarrito){
-        servicioCarrito = new ServicioEnCarrito (servicio.id, servicio.nombre, cantidad, servicio.valor, servicio.valor);
+        servicioCarrito = new ServicioEnCarrito (servicio.id, servicio.nombre, cantidad, servicio.valor, servicio.valor * parseInt(cantidad));
         servicioCargado = verificarServicioEnLocalStorage(servicioCarrito, cantidad);
     }else{
         servicioCarrito = servicio;
@@ -79,7 +80,7 @@ function cargaServicioCarrito (servicio, cantidad){
     if(!servicioCargado || primerIngresoCarrito){
         cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
                                         <td class="cartColumnsInfo">${servicioCarrito.cantidad}</td>
-                                        <td class="cartColumnsInfo">${servicioCarrito.total}</td></tr>`
+                                        <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`
     }
     
 }
@@ -96,9 +97,9 @@ function verificarServicioEnLocalStorage(servicio, cantidad){
     if(existente){
         let index = arrayLocalStorage.findIndex((serv) => serv.id == existente.id);
         cant = parseInt(arrayLocalStorage[index].cantidad) + parseInt(cantidad);
-        total = cant * parseInt(arrayLocalStorage[index].valor);
+        totalServicio = cant * parseInt(arrayLocalStorage[index].valor);
         arrayLocalStorage[index].cantidad = cant;
-        arrayLocalStorage[index].total = total;
+        arrayLocalStorage[index].total = totalServicio;
         localStorage.setItem("arrayCart", JSON.stringify(arrayLocalStorage));
         carrito = arrayLocalStorage;
         recargarCarrito();
@@ -117,8 +118,6 @@ function totalCarrito(localStorageServices){
     for (let servicio of localStorageServices){
         totalCar += parseInt(servicio.total);
     }
-    localStorage.setItem("cartTotal", totalCar);
-    total.innerHTML = "";
     total.innerHTML = `<p>Total: $${totalCar}</p>`;
 }
 
@@ -127,7 +126,7 @@ function recargarCarrito(){
     for(let servicioCarrito of carrito){
         cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
                                         <td class="cartColumnsInfo">${servicioCarrito.cantidad}</td>
-                                        <td class="cartColumnsInfo">${servicioCarrito.total}</td></tr>`
+                                        <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`
     }
 
     totalCarrito(carrito);
