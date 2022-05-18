@@ -82,16 +82,3 @@ function filtrarServiciosPorCategoria(e){
 }
 
 
-//CARGA DE NUEVOS SERVICIOS POR EL ADMIN
-let addServiceButton = document.getElementsByClassName("addServiceButton");
-let addServiceForm = document.getElementsByClassName("addServiceForm");
-addServiceForm[0].style.display = 'none';
-
-
-addServiceButton[0].addEventListener("click", setVisibleAddServiceForm);
-
-function setVisibleAddServiceForm (){
-    addServiceForm[0].style.display = 'block';
-}
-
-
