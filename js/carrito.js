@@ -113,14 +113,17 @@ function verificarServicioEnLocalStorage(servicio, cantidad){
 }
 
 function generarFilaServicioDelCarrito(servicioCarrito){
-    cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
+    let fila = document.createElement("TR");
+    fila.innerHTML =`<td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
     <td class="cartColumnsInfo">
     <button class="sizeButton" id="increaseButton${servicioCarrito.id}">+</button>
     <p class="cant">${servicioCarrito.cantidad}</p>
     <button class="sizeButton" id="decreaseButton${servicioCarrito.id}">-</button>
     </td>
     <td class="cartColumnsInfo"><p>$ ${servicioCarrito.total}</p>
-    <button class="deleteButton" id="deleteButton${servicioCarrito.id}"><img class="bin" src="../Imágenes/cesto.png"/></button></td></tr>`;
+    <button class="deleteButton" id="deleteButton${servicioCarrito.id}"><img class="bin" src="../Imágenes/cesto.png"/></button></td>`;
+
+    cartHiredServicesContainer.appendChild(fila);
 
     let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
     botonAumentar.onclick = () => { incrementarServicio(servicioCarrito)}
@@ -130,6 +133,8 @@ function generarFilaServicioDelCarrito(servicioCarrito){
 
     let botonEliminar = document.getElementById(`deleteButton${servicioCarrito.id}`);
     botonEliminar.onclick = () => { eliminarServicioDelCarrito(servicioCarrito)}
+
+    
 }
 
 function totalCarrito(localStorageServices){
