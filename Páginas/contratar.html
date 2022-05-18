@@ -48,13 +48,10 @@
                             <li><a href="./servicios.html">Servicios</a></li>
                         </section>
                         <section>
-                            <li><a href="./ofertasLaborales.html">Ofertas Laborales</a></li>
+                            <li><a href="./ofertasLaborales.html">Empleos</a></li>
                         </section>
                         <section>
                             <li><a href="./contratar.html">Contratar</a></li>
-                        </section>
-                        <section>
-                            <li><button>Enable body scrolling</button></li>
                         </section>
                         <section></section>
                     </ul>
@@ -68,24 +65,8 @@
         <main>
             <h2 class="sectionTitle">Contratar nuestros servicios</h2>
             <br>
-            
             <div class="hiringContainer">
                 <div>
-                    <!--Filtro por categoría-->
-                    <div>
-                        <form class="serviceFilterForm">
-                            <label>Filtrar servicios por categoría:</label><br>
-                            <input type="radio" name="categoriaFiltro" value="0" required>
-                            <label>Todos</label>
-                            <input type="radio" name="categoriaFiltro" value="1" required>
-                            <label>Entrevistas</label>
-                            <input type="radio" name="categoriaFiltro" value="2" required>
-                            <label>Test Psicotécnicos</label>
-                            <input type="radio" name="categoriaFiltro" value="3" required>
-                            <label>Pruebas técnicas IT</label>
-                            <button class="filterButton" type="submit">Filtrar</button>
-                        </form>
-                    </div>
                     <!--Espacio para los servicios a contratar-->
                     <div class="hiringServiceContainer"></div>
                 </div>
@@ -108,33 +89,27 @@
                             <div id="cartTotal" class="totalCart">
                                 <p>Total: $0</p>
                             </div>
-                        <div class="cartButtonContainer">
-                            <button id="hireServicesButton" class="cartButton">Contratar</button>
+                            <div class="cartButtonContainer">
+                                    <button id="hireServicesButton" class="cartButton">Contratar</button>
+                            </div>
+                        </div>
+                        <!--Filtro por categoría-->
+                        <div class="filterFormContainer">
+                            <form class="serviceFilterForm">
+                                <label>Filtros:</label><br>
+                                <input type="radio" name="categoriaFiltro" value="0" required>
+                                <label class="filterOption">Todos</label><br>
+                                <input type="radio" name="categoriaFiltro" value="1" required>
+                                <label class="filterOption">Entrevistas</label><br>
+                                <input type="radio" name="categoriaFiltro" value="2" required>
+                                <label class="filterOption">Test Psicotécnicos</label><br>
+                                <input type="radio" name="categoriaFiltro" value="3" required>
+                                <label class="filterOption">Pruebas técnicas IT</label><br>
+                                <button class="filterButton" type="submit">Filtrar</button>
+                            </form>
                         </div>
                     </aside>
                 </div>
-            </div>
-            <!--Botón para que el admin cargue nuevos servicios-->
-            <div class="buttonAddContainer">
-                <button class="addServiceButton">Cargar nuevos servicios</button>
-            </div>
-            <!--Form para la carga de nuevos servicios-->
-            <div class="addServiceForm">
-                <h2 class="sectionTitle">Cargar servicios</h2>
-                <form class="form">
-                    <label>Categoría:</label>
-                    <input type="radio" name="categoria" value="1" required>
-                    <label>Entrevistas</label>
-                    <input type="radio" name="categoria" value="2" required>
-                    <label>Test Psicotécnicos</label>
-                    <input type="radio" name="categoria" value="3" required>
-                    <label>Pruebas técnicas IT</label>
-                    <label>Nombre:</label>
-                    <input type="text" required>
-                    <label>Valor:</label>
-                    <input type="number" required>
-                    <button type="submit">Cargar</button>
-                </form> 
             </div>
         </main>
         <!-- end main -->

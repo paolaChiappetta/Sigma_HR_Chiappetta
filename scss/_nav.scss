@@ -21,12 +21,12 @@
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 700px) {
 
     .navListContainer
     {
         @include gridRows(1fr);
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         list-style: none;
         height: 50px;
         background-color: map-get($colores, primario);
