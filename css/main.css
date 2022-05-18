@@ -542,7 +542,8 @@ footer {
   font-size: large;
   font-weight: bold;
   margin: 20px;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
 
 .cartContainer {
   margin-left: 10px;
@@ -627,7 +628,8 @@ footer {
   font-weight: normal;
   margin-left: 20px;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  cursor: pointer; }
 
 .cartColumnsInfo {
   background-color: rgba(255, 255, 255, 0.3);
@@ -639,3 +641,19 @@ footer {
   text-align: center;
   margin: 1px;
   font-size: 12px; }
+
+.bin {
+  width: 10px;
+  height: 10px; }
+
+.deleteButton {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer; }
+
+.sizeButton {
+  width: 10px;
+  height: 10px;
+  border: transparent;
+  border-radius: 100%;
+  cursor: pointer; }

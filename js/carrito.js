@@ -80,21 +80,8 @@ function cargaServicioCarrito (servicio, cantidad){
     }
 
     if(!servicioCargado || primerIngresoCarrito){
-        cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
-                                                <td class="cartColumnsInfo">
-                                                <button id="increaseButton${servicioCarrito.id}">+</button>
-                                                <p>${servicioCarrito.cantidad}</p>
-                                                <button id="decreaseButton${servicioCarrito.id}">-</button>
-                                                </td>
-                                                <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`;
-
-        let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
-        botonAumentar.onclick = () => { incrementarServicio(servicio)}
-
-        let botonDecrementar = document.getElementById(`decreaseButton${servicioCarrito.id}`);
-        botonDecrementar.onclick = () => { decrementarServicio(servicio)}
+        generarFilaServicioDelCarrito(servicioCarrito);
     }
-    
 }
 
 function verificarServicioEnLocalStorage(servicio, cantidad){
@@ -125,6 +112,26 @@ function verificarServicioEnLocalStorage(servicio, cantidad){
     return existe;
 }
 
+function generarFilaServicioDelCarrito(servicioCarrito){
+    cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
+    <td class="cartColumnsInfo">
+    <button class="sizeButton" id="increaseButton${servicioCarrito.id}">+</button>
+    <p>${servicioCarrito.cantidad}</p>
+    <button class="sizeButton" id="decreaseButton${servicioCarrito.id}">-</button>
+    </td>
+    <td class="cartColumnsInfo"><p>$ ${servicioCarrito.total}</p>
+    <button class="deleteButton" id="deleteButton${servicioCarrito.id}"><img class="bin" src="../Imágenes/cesto.png"/></button></td></tr>`;
+
+    let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
+    botonAumentar.onclick = () => { incrementarServicio(servicioCarrito)}
+
+    let botonDecrementar = document.getElementById(`decreaseButton${servicioCarrito.id}`);
+    botonDecrementar.onclick = () => { decrementarServicio(servicioCarrito)}
+
+    let botonEliminar = document.getElementById(`deleteButton${servicioCarrito.id}`);
+    botonEliminar.onclick = () => { eliminarServicioDelCarrito(servicioCarrito)}
+}
+
 function totalCarrito(localStorageServices){
     let totalCar = 0;
     for (let servicio of localStorageServices){
@@ -136,19 +143,7 @@ function totalCarrito(localStorageServices){
 function recargarCarrito(){
     cartHiredServicesContainer.innerHTML = "";
     for(let servicioCarrito of carrito){
-        cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
-                                                <td class="cartColumnsInfo">
-                                                <button id="increaseButton${servicioCarrito.id}">+</button>
-                                                <p>${servicioCarrito.cantidad}</p>
-                                                <button id="decreaseButton${servicioCarrito.id}">-</button>
-                                                </td>
-                                                <td class="cartColumnsInfo">$ ${servicioCarrito.total}</td></tr>`;
-
-        let botonAumentar = document.getElementById(`increaseButton${servicioCarrito.id}`);
-        botonAumentar.onclick = () => { incrementarServicio(servicioCarrito)}
-
-        let botonDecrementar = document.getElementById(`decreaseButton${servicioCarrito.id}`);
-        botonDecrementar.onclick = () => { decrementarServicio(servicioCarrito)}
+        generarFilaServicioDelCarrito(servicioCarrito);
     }
 
     totalCarrito(carrito);
@@ -188,7 +183,7 @@ function eliminarServicioDelCarrito(servicio){
     carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
     let posicion = carritoLocalStorage.findIndex((serv) => serv.id == servicio.id);
 
-    carritoLocalStorage.remove(carritoLocalStorage[posicion]);
+    carritoLocalStorage.splice(posicion, 1);
     localStorage.setItem("arrayCart", JSON.stringify(carritoLocalStorage));
 
     carrito = carritoLocalStorage;
@@ -199,7 +194,7 @@ function eliminarServicioDelCarrito(servicio){
 function contratar(){
     carritoLocalStorage = JSON.parse(localStorage.getItem("arrayCart"));
 
-    if(carrito !=null){
+    if(carritoLocalStorage !=null && carritoLocalStorage.length > 0){
         Swal.fire({
             icon: 'success',
             title: 'Muchas gracias por elegirnos!',
