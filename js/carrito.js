@@ -116,7 +116,7 @@ function generarFilaServicioDelCarrito(servicioCarrito){
     cartHiredServicesContainer.innerHTML +=`<tr><td class="cartColumnsInfo">${servicioCarrito.nombre}</td>
     <td class="cartColumnsInfo">
     <button class="sizeButton" id="increaseButton${servicioCarrito.id}">+</button>
-    <p>${servicioCarrito.cantidad}</p>
+    <p class="cant">${servicioCarrito.cantidad}</p>
     <button class="sizeButton" id="decreaseButton${servicioCarrito.id}">-</button>
     </td>
     <td class="cartColumnsInfo"><p>$ ${servicioCarrito.total}</p>

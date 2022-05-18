@@ -182,28 +182,43 @@
     color: map-get($colores, negro);
     font-weight: normal;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
+    justify-content: center;
     margin: 1px;
     font-size: 12px;
+
+    p, button{
+        display: inline;
+    }
 }
 
 .bin{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
 
 .deleteButton{
     border: transparent;
     background-color: transparent;
     cursor: pointer;
+    margin-left: 4px;
+    margin-top: 2px;
 }
 
 .sizeButton{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border: transparent;
     border-radius: 100%;
     cursor: pointer;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
 }
